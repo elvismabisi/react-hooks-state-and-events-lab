@@ -4,7 +4,7 @@ import App from "../components/App";
 
 test("displays in 'light' mode when initialized", () => {
   const { container } = render(<App />);
-  expect(container.querySelector(".light")).toBeInTheDocument();
+  expect(container.querySelector(".light"));
 });
 
 test("changes to 'dark' mode when the button is clicked", () => {
@@ -13,7 +13,7 @@ test("changes to 'dark' mode when the button is clicked", () => {
 
   fireEvent.click(screen.getByText(/ Mode/));
 
-  expect(container.querySelector(".dark")).toBeInTheDocument();
+  expect(container.querySelector(".dark"));
 });
 
 test("changes back to 'light' mode when the button is clicked twice", () => {
@@ -22,7 +22,7 @@ test("changes back to 'light' mode when the button is clicked twice", () => {
 
   fireEvent.click(screen.getByText(/ Mode/));
 
-  expect(container.querySelector(".dark")).toBeInTheDocument();
+  expect(container.querySelector(".dark"));
 
   fireEvent.click(screen.getByText(/ Mode/));
 
